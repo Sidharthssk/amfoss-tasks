@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="../page-2/js/index.js"></script>
+    <title>JS</title>
+  </head>
+  <body>
+    <!--On click of Button-1 store something in localStorage-->
+    <button class="button" onclick="locals()">Button-1</button>
+    <script>
+      function locals()
+      {
+        localStorage.setItem("name","Pizzamenu");
+      }
+    </script>
+    <!--On click of Button-2 show a popup with current time-->
+    <button class="button" id="button">Button-2</button>
+       <div class="bg-modal">
+            <div class="modal-content">
+                <div class="close" id="close">+</div>
+                <p id="ti"></p>
+            </div>
+       </div>
+       <script>
+           document.getElementById('button').addEventListener('click',function(){
+             document.querySelector('.bg-modal').style.display='flex';
+           });
+           document.getElementById('close').addEventListener('click',function(){
+             document.querySelector('.bg-modal').style.display='none';
+           });
+           var Ti=time();
+           document.getElementById('ti').innerHTML=Ti;
+           function time()
+           {
+             var today = new Date();
+             var time= today.getHours()+":"+today.getMinutes()+":"+today.getSeconds();
+             return time;
+           }
+       </script>
+    <!--On click of Button-3 change the background-->
+    <button class="button" onclick=backchange();>Button-3</button>
+    <script>
+      function backchange()
+      {
+        document.body.style.background="url('https://wallpapercave.com/wp/wp3305861.jpg')";
+      }
+    </script>
+    <!--On click of Button-4 refresh the page-->
+    <button class="button" onclick="rload()">Button-4</button>
+    <script>
+      function rload()
+      {
+        window.location.reload();
+      }
+    </script>
+    <!--On click of Button-5 open a new window-->
+    <button class="button" onclick="nwindow()">Button-5</button>
+    <script>
+      function nwindow()
+      {
+        window.open();
+      }
+    </script>
+    <!--On click of Button-6 spam the console with 'I did it'-->
+    <button class="button" onclick="loop()">Button-6</button>
+    <script>
+      function loop()
+      {
+        for(let i=1;i>0;i++)
+        {
+          console.log("I did it \n");
+
+        }
+      }
+    </script>
+    <form>
+      <!--set form action-->
+      <a href="../page-3/chart.html">
+      <button class="button" >Next
+    </a>
+    </form>
+    
+  </body>
+</html>
