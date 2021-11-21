@@ -1,4 +1,4 @@
-#Detailed terminal commands:
+# Detailed terminal commands:
 
 Step 1:
      
@@ -37,4 +37,11 @@ Step 5:
 
 ![task02](https://user-images.githubusercontent.com/92671111/142723829-5612d751-2cb0-4cf5-9a60-1858d6e98e7b.png)
 
-         
+# Git Terminal commands required:
+
+1.  git init                                         (create an empty git repo or reintializes an existing one)
+2.  git add <filename>                               (to add the content to the stagging area to make the next commit)
+3.  git commit -m "<message>"                        (commit the files or any changes made in the files to the local repo)
+4.  git remote add origin <link of the central repo> (to set the origin)    
+5.  git pull origin <branch name>                    (to copy all files in branch from central repo to local repo)
+6.  git push origin <branch name>                    (transfers commits from local repo to central repo)
